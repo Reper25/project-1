@@ -1,5 +1,13 @@
 body {
     background-color: #010101;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+}
+.homeh{
+  background-image: url(assets/NvL.gif);
+}
+.homeh .overlay {
+  backdrop-filter: blur(4px);
 }
 .glow {
     font-size: 80px;
@@ -10,66 +18,81 @@ body {
   
   @keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00c0e6, 0 0 40px #00c0e6, 0 0 50px #00c0e6, 0 0 60px #00c0e6, 0 0 70px #00c0e6;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3de600, 0 0 40px #3de600, 0 0 50px #3de600, 0 0 60px #3de600, 0 0 70px #3de600;
     }
     
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #4d8eff, 0 0 40px #4d8eff, 0 0 50px #4d8eff, 0 0 60px #4d8eff, 0 0 70px #4d8eff, 0 0 80px #4d8eff;
+      text-shadow: 0 0 20px #fff, 0 0 30px #4dffac, 0 0 40px #4dffac, 0 0 50px #4dffac, 0 0 60px #4dffac, 0 0 70px #4dffac, 0 0 80px #4dffac;
     }
   }
-  .fontalicious {
-    animation-name: fontalicious;
-    animation-iteration-count: 5;
-    animation-iteration-count: 4;
-    animation-duration: 1s;
-  }
-  @keyframes fontalicious {
-    0% {
-      font-family: helvetica;
+  .typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #4FC3F7;
+    animation: cursorBlink 0.8s steps(3) infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    75% {
+        opacity: 1;
     }
-    10% {
-      font-family: times;
-    }
-    20% {
-      font-family: fantasy;
-    }
-    30% {
-      font-family: monospace;
-    }
-    40% {
-      font-family: Palatino;
-    }
-    50% {
-      font-family: Tahoma;
-    }
-    60% {
-      font-family: impact;
-    }
-    70% {
-      font-family: cursive;
-    }
-    80% {
-      font-family: monospace;
-    }
-    90% {
-      font-family: fantasy;
-    }
-    99% {
-      font-family: futura;
-    }
+
+    76%,
     100% {
+        opacity: 0;
     }
-  }
-  
-  .fontalicious {
-    animation-name: fontalicious;
-    animation-iteration-count: 4;
-    animation-duration: 1s;
-  }
-  
-  /**
-   * Animations
-   */
-  .animated {
-    animation-fill-mode: both;
-  }
+}
+
+.typing {
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+}
+
+.typing h2 {
+    position: relative;
+    color: #4FC3F7;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    animation: type 5s steps(11) infinite;
+}
+
+@keyframes type {
+
+    0%,
+    100% {
+        width: 0px;
+    }
+
+    30%,
+    60% {
+        width: 394.09px;
+    }
+}
+
+@media(max-width: 330px) {
+    .typing h2 {
+        font-size: 3rem;
+        animation: type 5s steps(10) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
+}
