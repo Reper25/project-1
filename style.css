@@ -31,10 +31,5 @@ body {
 }
 .bg-nicegreen{
     background-color: #D8E9A8;
-    border-radius: 5%;
+    border-radius: 2%;
 }
-  .aboutimg{
-    height: 400px;
-    width: 285px;
-    border-radius: 5%;
-  }
