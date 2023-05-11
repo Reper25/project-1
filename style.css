@@ -8,6 +8,8 @@ body {
 .homeh{
   background-image: url(assets/NvL.gif);
   background-size: cover;
+  background-position: center;
+  height: 86vh;
 }
 .homeh .overlay {
   backdrop-filter: blur(4px);
