@@ -24,13 +24,13 @@ object-fit: cover;
   font-size: larger;
 }
 .homeh{
-  background-image: url(assets/NvL.gif);
+  background-image: url(https://i.postimg.cc/wjhMx4Vh/NvL.gif);
   background-size: cover;
   background-position: center;
   height: 86vh;
 }
 .homeh .overlay {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
 }
 .glow {
     font-size: 80px;
