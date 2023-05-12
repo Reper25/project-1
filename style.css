@@ -10,6 +10,14 @@ body {
   background-color: #D8E9A8;
   border-radius: 2%;
 }
+
+.btncolor{
+  background: #D8E9A8;
+}
+.btncolor:hover{
+  background: #66fe00;
+  color: #000000;
+}
 .aboutImg{
 height: 500px;
 width: 500px;
@@ -23,11 +31,15 @@ object-fit: cover;
   font-family: 'Roboto', sans-serif;
   font-size: larger;
 }
+.btnthing{
+  display: flex;
+   ;
+}
 .homeh{
   background-image: url(https://i.postimg.cc/wjhMx4Vh/NvL.gif);
   background-size: cover;
   background-position: center;
-  height: 86vh;
+  height: 100vh;
 }
 .homeh .overlay {
   backdrop-filter: blur(2px);
